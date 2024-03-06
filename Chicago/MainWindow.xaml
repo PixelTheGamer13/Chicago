@@ -10,6 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="/bakgrund kort.png"/>
         </Grid.Background>
+        <!--#region Grid-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
@@ -36,12 +37,13 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-
-        <!--#region -->
+<!--#endregion-->
+        <!--#region Player 1 -->
         <Border
             Name="A1"
             Grid.Column="3"
             Grid.Row="1"
+            MouseDown="A1_MouseDown"
             >
             <Image
                 Name="A1b"
@@ -134,21 +136,9 @@
             </Image>
         </Border>
         <Button
-            Name="Byt1"
-            Grid.Column="6"
-            Grid.Row="2"
-            >
-            <TextBlock
-                Text="Byt Kort" 
-                FontFamily="Arial" 
-                FontSize="16" 
-                FontStyle="Italic"
-                />
-        </Button>
-        <Button
             Name="Pass1"
             Grid.Column="4"
-            Grid.Row="2"
+            Grid.Row="3"
             >
             <TextBlock
                 Text="Pass"
@@ -159,7 +149,7 @@
             </TextBlock>
         </Button>
         <!--#endregion-->
-        <!--#region -->
+        <!--#region Player 2 -->
         <Border
     Name="B1"
     Grid.Column="9"
@@ -257,20 +247,8 @@
             </Image>
         </Border>
         <Button
-    Name="Byt2"
-    Grid.Column="8"
-    Grid.Row="6"
-    >
-            <TextBlock
-        Text="Byt Kort" 
-        FontFamily="Arial" 
-        FontSize="16" 
-        FontStyle="Italic"
-        />
-        </Button>
-        <Button
             Name="Pass2"
-            Grid.Column="8"
+            Grid.Column="7"
             Grid.Row="4"
             >
         <TextBlock
@@ -282,7 +260,7 @@
         </TextBlock>
         </Button>
         <!--#endregion-->
-        <!--#region -->
+        <!--#region Player 3 -->
         <Border
     Name="C1"
     Grid.Column="3"
@@ -301,7 +279,7 @@
     >
             <Image
                 Name="C2b"
-        Source="C:\Users\viktor.b-elev1\Pictures\Kort\baksida kort2.png"
+        Source="C:\Users\viktor.b-elev1\Pictures\Kort\baksida kort2.png" Margin="0,0,0,3"
         >
             </Image>
         </Border>
@@ -340,8 +318,8 @@
         </Border>
         <Button
     Name="Byt3"
-    Grid.Column="4"
-    Grid.Row="8"
+    Grid.Column="1"
+    Grid.Row="9"
     >
             <TextBlock
         Text="Byt Kort" 
@@ -353,7 +331,7 @@
         <Button
             Name="Pass3"
             Grid.Column="6"
-            Grid.Row="8"
+            Grid.Row="7"
             >
         <TextBlock
                 Text="Pass"
@@ -364,7 +342,7 @@
         </TextBlock>
         </Button>
         <!--#endregion-->
-        <!--#region -->
+        <!--#region Player 4-->
         <Border
     Name="D1"
     Grid.Column="1"
@@ -461,20 +439,8 @@
             </Image>
         </Border>
         <Button
-    Name="Byt4"
-    Grid.Column="2"
-    Grid.Row="4"
-    >
-            <TextBlock
-        Text="Byt Kort" 
-        FontFamily="Arial" 
-        FontSize="16" 
-        FontStyle="Italic"
-        />
-        </Button>
-        <Button
             Name="Pass4"
-            Grid.Column="2"
+            Grid.Column="3"
             Grid.Row="6"
             >
         <TextBlock
@@ -486,7 +452,7 @@
         </TextBlock>
         </Button>
         <!--#endregion-->
-        
+        <!--#region Plan-->
         <Image
         Source="C:\Users\viktor.b-elev1\Pictures\Kort\grund kort.png"
         Name="plan1"
@@ -542,6 +508,16 @@
                 FontFamily="Arial"
                 FontStyle="Italic"
             />
+        </Button>
+        <!--#endregion-->
+        <Button
+            Grid.Column="9"
+            Grid.Row="1"
+            Content="Score Card"
+            FontSize="16"
+            Click="Button_Click"
+            >
+            
         </Button>
     </Grid>
 </Window>

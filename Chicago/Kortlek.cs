@@ -36,7 +36,7 @@ namespace Chicago
                             break;
 
                         case 12:
-                            kort = färger[j] + "D";
+                            kort = färger[j] + "Q";
                             skapakortlek.Add(kort);
                             break;
 
@@ -52,7 +52,7 @@ namespace Chicago
                     }
                 }
             }
-            return skapaKortlek();
+            return skapakortlek;
         }
     }
 }
